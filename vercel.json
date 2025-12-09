@@ -1,0 +1,20 @@
+{
+  "buildCommand": "cd ../.. && pnpm build --filter=@sourceparts/desert-solutions-api",
+  "framework": null,
+  "installCommand": "cd ../.. && pnpm install",
+  "outputDirectory": ".next",
+  "functions": {
+    "app/api/**/*.tsx": {
+      "maxDuration": 60
+    },
+    "app/api/**/*.ts": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/desert-solutions/:path*",
+      "destination": "/api/desert-solutions/:path*"
+    }
+  ]
+}
